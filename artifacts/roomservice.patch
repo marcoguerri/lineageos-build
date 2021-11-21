@@ -1,0 +1,11 @@
+--- lineage/build/tools/roomservice.py  2021-11-20 21:40:43.198785259 +0000
++++ lineage/build/tools/roomservice.py  2021-11-20 21:41:00.101854266 +0000
+@@ -111,7 +111,7 @@
+             elem.tail = i
+ 
+ def get_default_revision():
+-    m = ElementTree.parse(".repo/manifest.xml")
++    m = ElementTree.parse(".repo/manifests/default.xml")
+     d = m.findall('default')[0]
+     r = d.get('revision')
+     return r.replace('refs/heads/', '').replace('refs/tags/', '')
