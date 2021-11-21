@@ -15,7 +15,7 @@ build() {
     export USE_CCACHE=1
     export CCACHE_EXEC=/usr/bin/ccache
     export LC_ALL="C"
-    export USER="marcoguerri"
+    export USER="USER"
     export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
     ccache -M 50G
     ccache -o compression=true
