@@ -15,8 +15,7 @@ build() {
     export USE_CCACHE=1
     export CCACHE_EXEC=/usr/bin/ccache
     export LC_ALL="C"
-    export USER="USER"
-    export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
+    export USER="<USER>"
     ccache -M 50G
     ccache -o compression=true
 
@@ -26,6 +25,7 @@ build() {
     repo sync
 
     sudo ln -sf /usr/bin/python2 /usr/sbin/python
+    sudo ln -s /usr/lib/jvm/java-8-openjdk /usr/lib/jvm/java-8-openjdk-amd64
     patch -p1 < roomservice.patch || true
 
     # -eu do not play week with breakfast/brunch code paths, which

@@ -79,5 +79,5 @@ RUN sudo chmod u+x /home/lineageos/build.sh
 COPY --chown=lineageos artifacts/roomservice.patch /home/lineageos/android/lineage
 COPY --chown=lineageos artifacts/roomservice.xml.patch /home/lineageos/android/lineage
 
-RUN git config --global user.email "EMAIL"
-RUN git config --global user.name "NAME"
+RUN git config --global user.email "<EMAIL>"
+RUN git config --global user.name "<USER>"
